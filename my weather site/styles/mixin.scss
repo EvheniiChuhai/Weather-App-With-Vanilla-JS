@@ -1,0 +1,53 @@
+@import 'variables.scss';
+@mixin background-img($name) {
+  background-image: url('/icons/#{$name}.png');
+  background: {
+    repeat: no-repeat;
+    position: center;
+  }
+
+}
+
+@mixin height-width($h, $w) {
+  height: $h;
+  width: $w;
+}
+
+@mixin size($h, $w) {
+  height: $h;
+  width: $w;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-direct($direction, $align-items: stretch) {
+  align-items: $align-items;
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin flex-cc {
+  @include flex-center;
+  align-items: center;
+}
+
+@mixin fonts($fs, $fw, $line-height, $ls) {
+  @if $fw == 0 {
+    $fw: 400;
+  }
+  font-size: $fs;
+  font-weight: $fw;
+  line-height: $line-height;
+  letter-spacing: $ls;
+}
+
+@mixin flex-univers($df, $j-content, $a-items: stretch, $fd:row) {
+ 
+  display: $df;
+  justify-content: $j-content;
+  align-items: $a-items;
+  flex-direction: $fd;
+}
